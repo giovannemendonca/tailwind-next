@@ -13,7 +13,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="grid min-h-screen grid-cols-app">
+          <aside className="border-r border-zinc-200 px-5 py-8">siderBar</aside>
+          <main className="px-4 pb-12 pt-8">{children}</main>
+        </div>
+      </body>
     </html>
   )
 }
